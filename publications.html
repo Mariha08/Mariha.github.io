@@ -44,22 +44,21 @@
           <p class="itemTitle">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
           <div class="meta">Electronics (Journal), 2024</div>
           <p class="desc">
-            Proposes a clustered log organization to accelerate damage assessment and recovery by enabling faster dependency tracing
-            and reducing unnecessary log scans.
+            A novel log organization framework, termed ClusteredLog, was introduced to improve the efficiency of damage assessment and recovery in database systems by logically grouping operations related to individual data items. Traditional sequential logging was observed to scatter operations across the log, thereby increasing retrieval cost and recovery latency. To address this limitation, a clustering strategy was developed in which related operations were organized into structured logical groups while preserving the physical sequential nature of logging. The proposed design reduced search overhead, accelerated dependency tracing, and improved recovery performance, particularly in systems with high concurrency and large transaction volumes. Simulation-based analysis confirmed that the approach significantly decreased recovery time and resource usage relative to conventional logging methods. In this work, the clustered log architecture was designed, clustering and dependency-tracking algorithms were developed, and experimental evaluations were conducted to demonstrate performance improvements.
           </p>
           <div class="links">
-            <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
+            <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">Paper</a>
           </div>
         </div>
 
         <div class="card" data-filter-card="1" data-type="workshop">
           <p class="itemTitle">Validating Damage Assessment: A Simulation-Based Analysis of Blind Write Lineage in Fog Computing</p>
-          <div class="meta">SIoTEC Workshop, 2024</div>
+          <div class="meta">Eighteenth International Conference on Emerging Security Information, Systems and Technologies SECURWARE, 2024</div>
           <p class="desc">
-            Simulation-based evaluation of blind write lineage tracking for identifying compromised data and understanding propagation behavior in fog systems.
+            A simulation-driven validation study was conducted to evaluate the effectiveness of blind write lineage techniques for damage assessment in distributed fog systems. Because cyberattacks in such environments may spread rapidly across interconnected nodes, efficient identification of affected data was targeted as a primary objective. Dependency relationships among data items were traced using lineage-aware structures that grouped related updates into sub-dependency graphs, allowing compromised data to be isolated systematically. Three runtime structures—Blind Data Sets, Children Data Sets, and dependency graphs—were constructed to support the detection process and ensure accurate propagation tracking. Through controlled simulations under varying system conditions, the approach was shown to achieve improved detection accuracy, reduced recovery latency, and greater efficiency compared with conventional log-based recovery methods. In this study, simulation models were designed, experimental evaluations were conducted, and performance metrics were analyzed to demonstrate the advantages of lineage-guided recovery.
           </p>
           <div class="links">
-            <span class="small">Add proceedings/PDF link when available</span>
+            <a href="https://personales.upv.es/thinkmind/dl/conferences/securware/securware_2024/securware_2024_2_10_30009.pdf" target="_blank" rel="noreferrer">Paper</a>
           </div>
         </div>
 
@@ -67,10 +66,10 @@
           <p class="itemTitle">Damage Assessment in Fog Computing Systems: A Blind Write Lineage Approach</p>
           <div class="meta">IEEE/ACM CCGrid Workshops (CCGridW), 2024</div>
           <p class="desc">
-            Lineage-based method to isolate affected data after attacks in fog environments using structured dependency sets to reduce recovery scope.
+            =A lineage-based damage assessment framework for fog computing environments was proposed to address the challenge of rapidly identifying compromised data in distributed systems where attacks can propagate across dependent nodes. Blind write operations were leveraged as tracing anchors to efficiently identify affected data items without requiring exhaustive log scanning. Transaction histories were modeled as dependency graphs in which nodes represented data items and edges captured update relationships, allowing compromised regions to be isolated as independent subgraphs. Two lineage-tracking scenarios, including single-path and multipath dependency tracing, were formulated to handle varying levels of dependency complexity. Simulation-based evaluation demonstrated that the approach reduced recovery overhead, minimized unnecessary reads, and enabled faster identification of corrupted data compared with traditional log-analysis techniques. In this work, lineage-tracking algorithms and supporting data structures were designed, dependency-analysis mechanisms were implemented, and the effectiveness of the proposed method was validated through experimental analysis.
           </p>
           <div class="links">
-            <a href="https://doi.org/10.1109/CCGridW63211.2024.00012" target="_blank" rel="noreferrer">DOI</a>
+            <a href="https://doi.org/10.1109/CCGridW63211.2024.00012" target="_blank" rel="noreferrer">Paper</a>
           </div>
         </div>
 
@@ -104,6 +103,21 @@
       © <span id="y"></span> Mariha Siddika Ahmad
     </div>
   </footer>
+<script src="assets/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // enable filters
+  applyFilter("all");
+
+  // load ORCID list
+  loadOrcidWorks("0009-0009-2057-4574");
+
+  // footer year
+  const y = document.getElementById("y");
+  if (y) y.textContent = new Date().getFullYear();
+});
+</script>
 
 <script>
 (function(){
