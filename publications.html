@@ -10,7 +10,7 @@
   <header>
     <div class="wrap">
       <h1 class="name">Publications</h1>
-      <p class="role">Selected publications + ORCID auto-loaded works (ORCID is incomplete, so featured items stay manual).</p>
+      <!--<p class="role">Selected publications + ORCID auto-loaded works (ORCID is incomplete, so featured items stay manual).</p>-->
 
       <nav>
         <a href="index.html">Home</a>
@@ -74,7 +74,7 @@
           </div>
         </div>
 
-        <div class="card" data-filter-card="1" data-type="conference">
+       <!-- <div class="card" data-filter-card="1" data-type="conference">
           <p class="itemTitle">Design and Performance Analysis of a Compact Implantable PIFA Antenna for Biomedical Applications</p>
           <div class="meta">ICAEE, 2019</div>
           <p class="desc">
@@ -83,7 +83,7 @@
           <div class="links">
             <a href="https://doi.org/10.1109/ICAEE48663.2019.8975528" target="_blank" rel="noreferrer">DOI</a>
           </div>
-        </div>
+        </div> -->
 
       </section>
 
@@ -105,12 +105,21 @@
     </div>
   </footer>
 
-  <script src="assets/main.js"></script>
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    applyFilter("all");
-    loadOrcidWorks("0009-0009-2057-4574");
-  </script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  if(params.get("no_count") === "1"){
+    console.log("Visitor counter disabled for this visit.");
+    return;
+  }
+
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "//gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter","https://researchme.goatcounter.com/count");
+  document.body.appendChild(s);
+})();
+</script>
 
   <!-- Visitor counter (GoatCounter) -->
   <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
