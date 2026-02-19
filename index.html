@@ -1,152 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mariha Siddika Ahmad — Research</title>
-  <meta name="description" content="Research portfolio: database security, anomaly-aware recovery, transaction logs, and learning-augmented systems." />
-  <style>
-    :root{
-      --bg:#ffffff;
-      --text:#111827;
-      --muted:#4b5563;
-      --subtle:#6b7280;
-      --border:#e5e7eb;
-      --card:#f9fafb;
-      --link:#1d4ed8;
-      --pill:#eef2ff;
-      --pillText:#3730a3;
-      --max: 980px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-      color:var(--text);
-      background:var(--bg);
-      line-height:1.6;
-    }
-    a{color:var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
-    header{
-      border-bottom:1px solid var(--border);
-      padding:46px 0 26px;
-      background:linear-gradient(to bottom, #ffffff, #fbfdff);
-    }
-    .name{
-      font-size:36px; margin:0; letter-spacing:.2px;
-    }
-    .role{
-      margin:8px 0 0;
-      color:var(--muted);
-      max-width:78ch;
-      font-size:16.5px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
-    .topline{
-      display:flex; gap:14px; flex-wrap:wrap; align-items:center;
-      margin-top:14px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border-radius:999px;
-      background:var(--pill);
-      color:var(--pillText);
-      border:1px solid #e0e7ff;
-      font-size:13px;
-    }
-    nav{
-      margin-top:18px;
-      display:flex; gap:14px; flex-wrap:wrap;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-size:14px;
-    }
-    nav a{
-      padding:6px 10px;
-      border:1px solid var(--border);
-      border-radius:10px;
-      background:#fff;
-    }
-    main{padding:26px 0 52px}
-    section{margin-top:26px}
-    h2{
-      margin:0 0 12px;
-      font-size:16px;
-      letter-spacing:.18em;
-      text-transform:uppercase;
-      color:#374151;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:14px 14px 12px;
-      margin-top:12px;
-    }
-    .itemTitle{
-      margin:0;
-      font-weight:700;
-      font-size:16px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
-    .meta{
-      margin-top:6px;
-      color:var(--subtle);
-      font-size:13.5px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
-    .desc{
-      margin:10px 0 0;
-      color:#111827;
-      font-size:15px;
-    }
-    .links{
-      margin-top:10px;
-      display:flex; gap:12px; flex-wrap:wrap;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-size:13.5px;
-    }
-    .kicker{
-      color:var(--muted);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-size:14px;
-      margin-top:8px;
-      max-width:90ch;
-    }
-    .twoCol{
-      display:grid; grid-template-columns: 1fr; gap:14px;
-    }
-    @media (min-width: 860px){
-      .twoCol{grid-template-columns: 1fr 1fr;}
-    }
-    .muted{color:var(--muted)}
-    .small{font-size:13px; color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
-    footer{
-      border-top:1px solid var(--border);
-      padding:18px 0;
-      color:var(--muted);
-      font-size:13px;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-    }
-    .status{
-      margin-top:10px;
-      padding:10px 12px;
-      border:1px dashed #c7d2fe;
-      border-radius:14px;
-      background:#eef2ff;
-      color:#3730a3;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      font-size:13.5px;
-      display:none;
-    }
-  </style>
+  <title>Mariha Siddika Ahmad — Home</title>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
-
 <body>
   <header>
     <div class="wrap">
@@ -165,223 +24,74 @@
       </div>
 
       <nav>
-        <a href="#about">About</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#cv">CV</a>
-      </nav>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
 
-      <div id="pubStatus" class="status"></div>
+        <div class="toolbar">
+          <button class="btn" onclick="toggleTheme()">Toggle theme</button>
+        </div>
+      </nav>
     </div>
   </header>
 
   <main>
     <div class="wrap">
-
-      <section id="about">
+      <section>
         <h2>About</h2>
         <p class="kicker">
-          My research explores how to accelerate post-attack database recovery without compromising correctness.
-          I design structured log organizations and dependency-tracking methods to identify compromised data quickly,
-          and I study how learning-based components can guide performance decisions while keeping deterministic recovery semantics.
+          I work on improving how databases recover after cyberattacks by designing efficient log organization
+          and dependency tracking techniques. My goal is to reduce recovery latency while preserving deterministic correctness.
+          I also explore learning-augmented components that advise performance decisions (e.g., caching/retention) without changing recovery semantics.
         </p>
       </section>
 
-      <section id="publications">
-        <h2>Publications</h2>
-        <p class="small">
-          This section can auto-update from ORCID. Replace <b>YOUR-ORCID-ID</b> in the script below.
-          Items without a DOI may show limited metadata unless present on ORCID.
-        </p>
-
-        <!-- Manual “featured” (always visible) -->
-        <div class="card">
-          <p class="itemTitle">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
-          <div class="meta">Electronics (Journal), 2024</div>
-          <p class="desc">
-            Proposes a log organization framework that clusters related operations by data item to accelerate
-            damage assessment and recovery via faster dependency tracing and reduced log scanning.
-          </p>
-          <div class="links">
-            <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
-          </div>
-        </div>
-
-        <!-- Auto-updated list -->
-        <div id="pubList"></div>
-      </section>
-
-      <section id="projects">
-        <h2>Selected Projects</h2>
-        <div class="twoCol">
+      <section>
+        <h2>Highlights</h2>
+        <div class="grid two">
           <div class="card">
-            <p class="itemTitle">Malware Detection Using Pyramid Vision Transformer</p>
-            <div class="meta">Deep Learning / Security</div>
+            <p class="itemTitle">Research focus</p>
             <p class="desc">
-              Built an image-based malware detection pipeline by converting binaries into pixel representations
-              and applying a transformer-based model; achieved ~94.8% accuracy and 0.94 precision.
+              Transaction log analysis, lineage-based damage assessment, and post-attack recovery in distributed environments.
             </p>
-            <div class="links">
-              <!-- add your URL if available -->
-              <span class="muted small">Add: GitHub/report link</span>
-            </div>
           </div>
-
           <div class="card">
-            <p class="itemTitle">Hotel Booking Cancellation Prediction</p>
-            <div class="meta">Machine Learning</div>
+            <p class="itemTitle">Now</p>
             <p class="desc">
-              Developed cancellation prediction models with preprocessing, feature engineering, and algorithm comparison
-              (Logistic Regression, Random Forest, XGBoost) with hyperparameter tuning.
+              Building learning-augmented recovery methods that predict short-term reuse of data items to reduce repeated disk fetches.
             </p>
-            <div class="links">
-              <span class="muted small">Add: GitHub/report link</span>
-            </div>
           </div>
         </div>
       </section>
 
-      <section id="cv">
-        <h2>CV</h2>
+      <section>
+        <h2>Quick links</h2>
         <div class="card">
           <p class="desc">
-            Download CV: <a href="Mariha_CV.pdf" target="_blank" rel="noreferrer">Mariha_CV.pdf</a>
+            ORCID: <a href="https://orcid.org/0009-0009-2057-4574" target="_blank" rel="noreferrer">0009-0009-2057-4574</a>
           </p>
-          <p class="small muted">
-            If you host on GitHub Pages, put your PDF in the same repo with the exact filename above.
+          <p class="small">
+            Note: Not all works are on ORCID yet — the Publications page supports both “Featured” manual entries and ORCID-loaded entries.
           </p>
         </div>
       </section>
-
     </div>
   </main>
 
   <footer>
     <div class="wrap">
-      © <span id="y"></span> Mariha Siddika Ahmad • Built as a lightweight academic portfolio
+      © <span id="y"></span> Mariha Siddika Ahmad • Last updated: <span id="lu"></span>
     </div>
   </footer>
 
+  <script src="assets/main.js"></script>
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-
-    // ============================
-    // Publications Auto-Update (ORCID)
-    // ============================
-    // 1) Create/confirm your ORCID profile has your works.
-    // 2) Replace the ORCID below with your actual ORCID iD.
-    // 3) Optional: add DOIs in ORCID for richer metadata + links.
-    const ORCID = "0009-0009-2057-4574"; // e.g., "0000-0002-1825-0097"
-
-    const statusBox = document.getElementById("pubStatus");
-    const pubList = document.getElementById("pubList");
-
-    function showStatus(msg){
-      statusBox.style.display = "block";
-      statusBox.textContent = msg;
-    }
-
-    function safeText(x){ return (x ?? "").toString().trim(); }
-
-    async function fetchOrcidWorks(orcid){
-      // ORCID public API (JSON)
-      const url = `https://pub.orcid.org/v3.0/${encodeURIComponent(orcid)}/works`;
-      const res = await fetch(url, {
-        headers: { "Accept": "application/json" }
-      });
-      if(!res.ok){
-        throw new Error(`ORCID request failed: ${res.status}`);
-      }
-      return res.json();
-    }
-
-    function extractBestExternalUrl(work){
-      const ext = work?.["external-ids"]?.["external-id"] || [];
-      // Prefer DOI if available
-      const doi = ext.find(e => (e["external-id-type"] || "").toLowerCase() === "doi");
-      if(doi && doi["external-id-value"]){
-        return { label: "DOI", url: `https://doi.org/${doi["external-id-value"]}` };
-      }
-      // Otherwise fallback to any URL-ish external id
-      const urlId = ext.find(e => (e["external-id-url"] && e["external-id-url"].value));
-      if(urlId){
-        return { label: safeText(urlId["external-id-type"] || "Link"), url: urlId["external-id-url"].value };
-      }
-      return null;
-    }
-
-    function normalizeYear(work){
-      // ORCID summary doesn't always include year; try to read from publication-date if present
-      const y = work?.["publication-date"]?.year?.value;
-      return y ? y : "";
-    }
-
-    function renderWorkCard(title, venue, year, link){
-      const card = document.createElement("div");
-      card.className = "card";
-      const t = document.createElement("p");
-      t.className = "itemTitle";
-      t.textContent = title || "Untitled work";
-      const m = document.createElement("div");
-      m.className = "meta";
-      m.textContent = [venue, year].filter(Boolean).join(" • ");
-
-      const l = document.createElement("div");
-      l.className = "links";
-      if(link?.url){
-        const a = document.createElement("a");
-        a.href = link.url;
-        a.target = "_blank";
-        a.rel = "noreferrer";
-        a.textContent = link.label || "Link";
-        l.appendChild(a);
-      } else {
-        const span = document.createElement("span");
-        span.className = "muted small";
-        span.textContent = "No DOI/link found in ORCID metadata";
-        l.appendChild(span);
-      }
-
-      card.appendChild(t);
-      card.appendChild(m);
-      card.appendChild(l);
-      return card;
-    }
-
-    async function loadPublications(){
-      if(ORCID === "YOUR-ORCID-ID"){
-        showStatus("To auto-load publications, replace YOUR-ORCID-ID in the script with your ORCID iD.");
-        return;
-      }
-
-      showStatus("Loading publications from ORCID…");
-      try{
-        const data = await fetchOrcidWorks(ORCID);
-        const groups = data?.group || [];
-
-        // Each group may contain multiple versions; take the first summary as display
-        const items = groups.map(g => g?.["work-summary"]?.[0]).filter(Boolean);
-
-        // Build cards
-        const frag = document.createDocumentFragment();
-        items.forEach(w => {
-          const title = safeText(w?.title?.title?.value);
-          const venue = safeText(w?.["journal-title"]?.value) || safeText(w?.type);
-          const year = normalizeYear(w);
-          const link = extractBestExternalUrl(w);
-          frag.appendChild(renderWorkCard(title, venue, year, link));
-        });
-
-        pubList.innerHTML = "";
-        pubList.appendChild(frag);
-
-        showStatus(`Loaded ${items.length} work(s) from ORCID.`);
-      } catch(e){
-        showStatus(`Could not load ORCID publications. ${e.message}`);
-      }
-    }
-
-    loadPublications();
+    document.getElementById("lu").textContent = new Date().toLocaleString("en-US", { month:"long", year:"numeric" });
   </script>
+
+  <!-- Visitor counter (GoatCounter) - configure in section 3 below -->
+  <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
 </body>
 </html>
