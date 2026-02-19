@@ -3,241 +3,253 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mariha Siddika Ahmad — Research Portfolio</title>
+  <title>Mariha Siddika Ahmad — Research</title>
+  <meta name="description" content="Research portfolio: database security, anomaly-aware recovery, transaction logs, and learning-augmented systems." />
   <style>
     :root{
-      --bg:#0b0f14; --card:#111826; --text:#e8eef7; --muted:#a7b2c5;
-      --accent:#7dd3fc; --accent2:#a78bfa; --border:rgba(255,255,255,.08);
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --subtle:#6b7280;
+      --border:#e5e7eb;
+      --card:#f9fafb;
+      --link:#1d4ed8;
+      --pill:#eef2ff;
+      --pillText:#3730a3;
+      --max: 980px;
     }
     *{box-sizing:border-box}
     body{
-      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      background: radial-gradient(1200px 700px at 10% 10%, rgba(125,211,252,.12), transparent 55%),
-                  radial-gradient(1200px 700px at 90% 20%, rgba(167,139,250,.10), transparent 55%),
-                  var(--bg);
+      margin:0;
+      font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
       color:var(--text);
-      line-height:1.55;
+      background:var(--bg);
+      line-height:1.6;
     }
-    a{color:var(--accent); text-decoration:none}
+    a{color:var(--link); text-decoration:none}
     a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
     header{
-      padding:48px 20px 28px;
       border-bottom:1px solid var(--border);
-      background: linear-gradient(to bottom, rgba(17,24,38,.65), transparent);
+      padding:46px 0 26px;
+      background:linear-gradient(to bottom, #ffffff, #fbfdff);
     }
-    .wrap{max-width:980px; margin:0 auto}
-    .top{
-      display:flex; gap:18px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;
+    .name{
+      font-size:36px; margin:0; letter-spacing:.2px;
     }
-    h1{margin:0; font-size:34px; letter-spacing:.2px}
-    .subtitle{margin:8px 0 0; color:var(--muted); max-width:70ch}
-    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
-    .chip{
-      font-size:13px; color:var(--muted);
-      border:1px solid var(--border);
-      background: rgba(255,255,255,.03);
-      padding:6px 10px; border-radius:999px;
-    }
-    .contact{
-      margin-top:10px; color:var(--muted); font-size:14px;
-      display:flex; gap:14px; flex-wrap:wrap;
-    }
-    main{padding:28px 20px 54px}
-    section{margin-top:26px}
-    h2{
-      font-size:18px; margin:0 0 12px;
-      letter-spacing:.3px; text-transform:uppercase;
-      color:rgba(232,238,247,.92)
-    }
-    .grid{
-      display:grid; gap:14px;
-      grid-template-columns: repeat(12, 1fr);
-    }
-    .card{
-      grid-column: span 12;
-      background: rgba(17,24,38,.7);
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:16px 16px 14px;
-      backdrop-filter: blur(6px);
-    }
-    @media (min-width:820px){
-      .card.half{grid-column: span 6}
-    }
-    .meta{display:flex; gap:10px; flex-wrap:wrap; margin:6px 0 10px}
-    .tag{
-      font-size:12px; color:rgba(232,238,247,.86);
-      padding:4px 8px; border-radius:999px;
-      background: rgba(125,211,252,.10);
-      border:1px solid rgba(125,211,252,.18);
-    }
-    .tag.purple{
-      background: rgba(167,139,250,.10);
-      border:1px solid rgba(167,139,250,.18);
-    }
-    .title{
-      font-weight:700; font-size:16px; margin:0;
-    }
-    .venue{color:var(--muted); font-size:13.5px; margin-top:4px}
-    .desc{color:rgba(232,238,247,.92); margin:10px 0 0}
-    .links{margin-top:10px; display:flex; gap:12px; flex-wrap:wrap; font-size:13.5px}
-    footer{
-      border-top:1px solid var(--border);
-      padding:20px;
+    .role{
+      margin:8px 0 0;
       color:var(--muted);
+      max-width:78ch;
+      font-size:16.5px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .topline{
+      display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+      margin-top:14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--muted);
+      font-size:14px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      background:var(--pill);
+      color:var(--pillText);
+      border:1px solid #e0e7ff;
       font-size:13px;
     }
-    .note{color:var(--muted); font-size:13px; margin-top:8px}
+    nav{
+      margin-top:18px;
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:14px;
+    }
+    nav a{
+      padding:6px 10px;
+      border:1px solid var(--border);
+      border-radius:10px;
+      background:#fff;
+    }
+    main{padding:26px 0 52px}
+    section{margin-top:26px}
+    h2{
+      margin:0 0 12px;
+      font-size:16px;
+      letter-spacing:.18em;
+      text-transform:uppercase;
+      color:#374151;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:14px 14px 12px;
+      margin-top:12px;
+    }
+    .itemTitle{
+      margin:0;
+      font-weight:700;
+      font-size:16px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .meta{
+      margin-top:6px;
+      color:var(--subtle);
+      font-size:13.5px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .desc{
+      margin:10px 0 0;
+      color:#111827;
+      font-size:15px;
+    }
+    .links{
+      margin-top:10px;
+      display:flex; gap:12px; flex-wrap:wrap;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:13.5px;
+    }
+    .kicker{
+      color:var(--muted);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:14px;
+      margin-top:8px;
+      max-width:90ch;
+    }
+    .twoCol{
+      display:grid; grid-template-columns: 1fr; gap:14px;
+    }
+    @media (min-width: 860px){
+      .twoCol{grid-template-columns: 1fr 1fr;}
+    }
+    .muted{color:var(--muted)}
+    .small{font-size:13px; color:var(--muted); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;}
+    footer{
+      border-top:1px solid var(--border);
+      padding:18px 0;
+      color:var(--muted);
+      font-size:13px;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+    .status{
+      margin-top:10px;
+      padding:10px 12px;
+      border:1px dashed #c7d2fe;
+      border-radius:14px;
+      background:#eef2ff;
+      color:#3730a3;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      font-size:13.5px;
+      display:none;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <div class="wrap">
-      <div class="top">
-        <div>
-          <h1>Mariha Siddika Ahmad</h1>
-          <p class="subtitle">
-            PhD researcher working on database security, anomaly-aware damage assessment,
-            and post-attack recovery. Interested in log design, lineage tracking, and
-            learning-augmented systems for faster recovery.
-          </p>
+      <h1 class="name">Mariha Siddika Ahmad</h1>
+      <p class="role">
+        PhD researcher focused on database security, anomaly-aware damage assessment, and post-attack recovery.
+        Interests include transaction logs, lineage, and learning-augmented systems for faster recovery.
+      </p>
 
-          <div class="chips">
-            <span class="chip">Database Recovery</span>
-            <span class="chip">Transaction Logs</span>
-            <span class="chip">Damage Assessment</span>
-            <span class="chip">Fog/Distributed Systems</span>
-            <span class="chip">ML for Systems (Advisory)</span>
-          </div>
-
-          <div class="contact">
-            <span>Email: <a href="mailto:ma135@uark.edu">ma135@uark.edu</a></span>
-            <!-- Add these if you want -->
-            <!-- <span>Google Scholar: <a href="YOUR_SCHOLAR_URL" target="_blank" rel="noreferrer">Profile</a></span> -->
-            <!-- <span>GitHub: <a href="YOUR_GITHUB_URL" target="_blank" rel="noreferrer">@username</a></span> -->
-          </div>
-        </div>
+      <div class="topline">
+        <span>Email: <a href="mailto:ma135@uark.edu">ma135@uark.edu</a></span>
+        <span class="pill">Database Recovery</span>
+        <span class="pill">Transaction Logs</span>
+        <span class="pill">Damage Assessment</span>
+        <span class="pill">ML for Systems</span>
       </div>
 
-      <p class="note">
-        Tip: replace placeholder links (Scholar/GitHub) if you want this page to be “live-ready.”
-      </p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#cv">CV</a>
+      </nav>
+
+      <div id="pubStatus" class="status"></div>
     </div>
   </header>
 
   <main>
     <div class="wrap">
 
-      <section>
+      <section id="about">
+        <h2>About</h2>
+        <p class="kicker">
+          My research explores how to accelerate post-attack database recovery without compromising correctness.
+          I design structured log organizations and dependency-tracking methods to identify compromised data quickly,
+          and I study how learning-based components can guide performance decisions while keeping deterministic recovery semantics.
+        </p>
+      </section>
+
+      <section id="publications">
         <h2>Publications</h2>
-        <div class="grid">
+        <p class="small">
+          This section can auto-update from ORCID. Replace <b>YOUR-ORCID-ID</b> in the script below.
+          Items without a DOI may show limited metadata unless present on ORCID.
+        </p>
 
-          <article class="card">
-            <p class="title">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
-            <div class="meta">
-              <span class="tag">Journal</span>
-              <span class="tag purple">Database Recovery</span>
-            </div>
-            <div class="venue">Electronics (2024)</div>
+        <!-- Manual “featured” (always visible) -->
+        <div class="card">
+          <p class="itemTitle">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
+          <div class="meta">Electronics (Journal), 2024</div>
+          <p class="desc">
+            Proposes a log organization framework that clusters related operations by data item to accelerate
+            damage assessment and recovery via faster dependency tracing and reduced log scanning.
+          </p>
+          <div class="links">
+            <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
+          </div>
+        </div>
+
+        <!-- Auto-updated list -->
+        <div id="pubList"></div>
+      </section>
+
+      <section id="projects">
+        <h2>Selected Projects</h2>
+        <div class="twoCol">
+          <div class="card">
+            <p class="itemTitle">Malware Detection Using Pyramid Vision Transformer</p>
+            <div class="meta">Deep Learning / Security</div>
             <p class="desc">
-              Proposes a log organization framework that clusters related operations by data item
-              to accelerate damage assessment and recovery. The design improves dependency tracing
-              and reduces unnecessary log scans compared with sequential logging.
+              Built an image-based malware detection pipeline by converting binaries into pixel representations
+              and applying a transformer-based model; achieved ~94.8% accuracy and 0.94 precision.
             </p>
             <div class="links">
-              <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
+              <!-- add your URL if available -->
+              <span class="muted small">Add: GitHub/report link</span>
             </div>
-          </article>
+          </div>
 
-          <article class="card half">
-            <p class="title">Validating Damage Assessment: A Simulation-Based Analysis of Blind Write Lineage in Fog Computing</p>
-            <div class="meta">
-              <span class="tag">Conference/Workshop</span>
-              <span class="tag purple">Fog Computing</span>
-            </div>
-            <div class="venue">5th Workshop on Secure IoT, Edge and Cloud Systems (SIoTEC), Philadelphia, PA (2024)</div>
+          <div class="card">
+            <p class="itemTitle">Hotel Booking Cancellation Prediction</p>
+            <div class="meta">Machine Learning</div>
             <p class="desc">
-              Presents a simulation-based evaluation of blind write lineage tracking for identifying
-              compromised data in distributed fog environments and studying propagation patterns.
+              Developed cancellation prediction models with preprocessing, feature engineering, and algorithm comparison
+              (Logistic Regression, Random Forest, XGBoost) with hyperparameter tuning.
             </p>
             <div class="links">
-              <!-- Add URL if you have a public PDF / proceedings page -->
-              <span class="note">Link: add proceedings/PDF URL if available</span>
+              <span class="muted small">Add: GitHub/report link</span>
             </div>
-          </article>
-
-          <article class="card half">
-            <p class="title">Damage Assessment in Fog Computing Systems: A Blind Write Lineage Approach</p>
-            <div class="meta">
-              <span class="tag">Conference</span>
-              <span class="tag purple">Lineage &amp; Recovery</span>
-            </div>
-            <div class="venue">IEEE/ACM CCGrid Workshops (CCGridW) (2024)</div>
-            <p class="desc">
-              Introduces a lineage-based methodology for isolating affected data after attacks in fog
-              systems using structured dependency sets to reduce recovery scope.
-            </p>
-            <div class="links">
-              <a href="https://doi.org/10.1109/CCGridW63211.2024.00012" target="_blank" rel="noreferrer">DOI</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <p class="title">Design and Performance Analysis of a Compact Implantable PIFA Antenna for Biomedical Applications</p>
-            <div class="meta">
-              <span class="tag">Conference</span>
-              <span class="tag purple">Biomedical Antennas</span>
-            </div>
-            <div class="venue">5th International Conference on Advances in Electrical Engineering (ICAEE) (2019)</div>
-            <p class="desc">
-              Designs and evaluates a compact implantable antenna for biomedical communication,
-              analyzing key performance metrics including bandwidth, gain, and efficiency.
-            </p>
-            <div class="links">
-              <a href="https://doi.org/10.1109/ICAEE48663.2019.8975528" target="_blank" rel="noreferrer">DOI</a>
-            </div>
-          </article>
-
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2>Selected Projects</h2>
-        <div class="grid">
-
-          <article class="card half">
-            <p class="title">Malware Detection Using Pyramid Vision Transformer</p>
-            <div class="meta">
-              <span class="tag">Project</span>
-              <span class="tag purple">Deep Learning</span>
-            </div>
-            <p class="desc">
-              Built an image-based malware detection pipeline by converting binaries into pixel
-              representations and applying a Pyramid Vision Transformer. Achieved ~94.8% accuracy
-              and 0.94 precision in detecting planted malicious code patterns.
-            </p>
-            <div class="links">
-              <span class="note">Link: add GitHub/report URL if available</span>
-            </div>
-          </article>
-
-          <article class="card half">
-            <p class="title">Hotel Booking Cancellation Prediction</p>
-            <div class="meta">
-              <span class="tag">Project</span>
-              <span class="tag purple">Machine Learning</span>
-            </div>
-            <p class="desc">
-              Developed cancellation prediction models with preprocessing, feature engineering,
-              and algorithm comparison (Logistic Regression, Random Forest, XGBoost), including
-              hyperparameter tuning for best performance.
-            </p>
-            <div class="links">
-              <span class="note">Link: add GitHub/report URL if available</span>
-            </div>
-          </article>
-
+      <section id="cv">
+        <h2>CV</h2>
+        <div class="card">
+          <p class="desc">
+            Download CV: <a href="Mariha_CV.pdf" target="_blank" rel="noreferrer">Mariha_CV.pdf</a>
+          </p>
+          <p class="small muted">
+            If you host on GitHub Pages, put your PDF in the same repo with the exact filename above.
+          </p>
         </div>
       </section>
 
@@ -246,12 +258,130 @@
 
   <footer>
     <div class="wrap">
-      © <span id="y"></span> Mariha Siddika Ahmad — Research Portfolio
+      © <span id="y"></span> Mariha Siddika Ahmad • Built as a lightweight academic portfolio
     </div>
   </footer>
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+
+    // ============================
+    // Publications Auto-Update (ORCID)
+    // ============================
+    // 1) Create/confirm your ORCID profile has your works.
+    // 2) Replace the ORCID below with your actual ORCID iD.
+    // 3) Optional: add DOIs in ORCID for richer metadata + links.
+    const ORCID = "0009-0009-2057-4574"; // e.g., "0000-0002-1825-0097"
+
+    const statusBox = document.getElementById("pubStatus");
+    const pubList = document.getElementById("pubList");
+
+    function showStatus(msg){
+      statusBox.style.display = "block";
+      statusBox.textContent = msg;
+    }
+
+    function safeText(x){ return (x ?? "").toString().trim(); }
+
+    async function fetchOrcidWorks(orcid){
+      // ORCID public API (JSON)
+      const url = `https://pub.orcid.org/v3.0/${encodeURIComponent(orcid)}/works`;
+      const res = await fetch(url, {
+        headers: { "Accept": "application/json" }
+      });
+      if(!res.ok){
+        throw new Error(`ORCID request failed: ${res.status}`);
+      }
+      return res.json();
+    }
+
+    function extractBestExternalUrl(work){
+      const ext = work?.["external-ids"]?.["external-id"] || [];
+      // Prefer DOI if available
+      const doi = ext.find(e => (e["external-id-type"] || "").toLowerCase() === "doi");
+      if(doi && doi["external-id-value"]){
+        return { label: "DOI", url: `https://doi.org/${doi["external-id-value"]}` };
+      }
+      // Otherwise fallback to any URL-ish external id
+      const urlId = ext.find(e => (e["external-id-url"] && e["external-id-url"].value));
+      if(urlId){
+        return { label: safeText(urlId["external-id-type"] || "Link"), url: urlId["external-id-url"].value };
+      }
+      return null;
+    }
+
+    function normalizeYear(work){
+      // ORCID summary doesn't always include year; try to read from publication-date if present
+      const y = work?.["publication-date"]?.year?.value;
+      return y ? y : "";
+    }
+
+    function renderWorkCard(title, venue, year, link){
+      const card = document.createElement("div");
+      card.className = "card";
+      const t = document.createElement("p");
+      t.className = "itemTitle";
+      t.textContent = title || "Untitled work";
+      const m = document.createElement("div");
+      m.className = "meta";
+      m.textContent = [venue, year].filter(Boolean).join(" • ");
+
+      const l = document.createElement("div");
+      l.className = "links";
+      if(link?.url){
+        const a = document.createElement("a");
+        a.href = link.url;
+        a.target = "_blank";
+        a.rel = "noreferrer";
+        a.textContent = link.label || "Link";
+        l.appendChild(a);
+      } else {
+        const span = document.createElement("span");
+        span.className = "muted small";
+        span.textContent = "No DOI/link found in ORCID metadata";
+        l.appendChild(span);
+      }
+
+      card.appendChild(t);
+      card.appendChild(m);
+      card.appendChild(l);
+      return card;
+    }
+
+    async function loadPublications(){
+      if(ORCID === "YOUR-ORCID-ID"){
+        showStatus("To auto-load publications, replace YOUR-ORCID-ID in the script with your ORCID iD.");
+        return;
+      }
+
+      showStatus("Loading publications from ORCID…");
+      try{
+        const data = await fetchOrcidWorks(ORCID);
+        const groups = data?.group || [];
+
+        // Each group may contain multiple versions; take the first summary as display
+        const items = groups.map(g => g?.["work-summary"]?.[0]).filter(Boolean);
+
+        // Build cards
+        const frag = document.createDocumentFragment();
+        items.forEach(w => {
+          const title = safeText(w?.title?.title?.value);
+          const venue = safeText(w?.["journal-title"]?.value) || safeText(w?.type);
+          const year = normalizeYear(w);
+          const link = extractBestExternalUrl(w);
+          frag.appendChild(renderWorkCard(title, venue, year, link));
+        });
+
+        pubList.innerHTML = "";
+        pubList.appendChild(frag);
+
+        showStatus(`Loaded ${items.length} work(s) from ORCID.`);
+      } catch(e){
+        showStatus(`Could not load ORCID publications. ${e.message}`);
+      }
+    }
+
+    loadPublications();
   </script>
 </body>
 </html>
