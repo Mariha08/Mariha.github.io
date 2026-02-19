@@ -85,13 +85,22 @@
     </div>
   </footer>
 
-  <script src="assets/main.js"></script>
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    document.getElementById("lu").textContent = new Date().toLocaleString("en-US", { month:"long", year:"numeric" });
-  </script>
+ <script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  if(params.get("no_count") === "1"){
+    console.log("Visitor counter disabled for this visit.");
+    return;
+  }
 
-  <!-- Visitor counter (GoatCounter) - configure in section 3 below -->
-  <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "//gc.zgo.at/count.js";
+  s.setAttribute("data-goatcounter","https://researchme.goatcounter.com/count");
+  document.body.appendChild(s);
+})();
+</script>
+
 </body>
 </html>
+
