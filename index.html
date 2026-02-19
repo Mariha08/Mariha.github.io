@@ -113,9 +113,21 @@
 })();
 </script>
 
+  <script>
+document.addEventListener("DOMContentLoaded", function(){
+  const y = document.getElementById("y");
+  if(y) y.textContent = new Date().getFullYear();
+
+  const lu = document.getElementById("lu");
+  if(lu){
+    lu.textContent = document.lastModified.split(" ")[0];
+  }
+});
+</script>
 
 </body>
 </html>
+
 
 
 
