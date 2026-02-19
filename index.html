@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mariha Siddika Ahmad — Research Portfolio</title>
+  <style>
+    :root{
+      --bg:#0b0f14; --card:#111826; --text:#e8eef7; --muted:#a7b2c5;
+      --accent:#7dd3fc; --accent2:#a78bfa; --border:rgba(255,255,255,.08);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background: radial-gradient(1200px 700px at 10% 10%, rgba(125,211,252,.12), transparent 55%),
+                  radial-gradient(1200px 700px at 90% 20%, rgba(167,139,250,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{
+      padding:48px 20px 28px;
+      border-bottom:1px solid var(--border);
+      background: linear-gradient(to bottom, rgba(17,24,38,.65), transparent);
+    }
+    .wrap{max-width:980px; margin:0 auto}
+    .top{
+      display:flex; gap:18px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap;
+    }
+    h1{margin:0; font-size:34px; letter-spacing:.2px}
+    .subtitle{margin:8px 0 0; color:var(--muted); max-width:70ch}
+    .chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+    .chip{
+      font-size:13px; color:var(--muted);
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.03);
+      padding:6px 10px; border-radius:999px;
+    }
+    .contact{
+      margin-top:10px; color:var(--muted); font-size:14px;
+      display:flex; gap:14px; flex-wrap:wrap;
+    }
+    main{padding:28px 20px 54px}
+    section{margin-top:26px}
+    h2{
+      font-size:18px; margin:0 0 12px;
+      letter-spacing:.3px; text-transform:uppercase;
+      color:rgba(232,238,247,.92)
+    }
+    .grid{
+      display:grid; gap:14px;
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .card{
+      grid-column: span 12;
+      background: rgba(17,24,38,.7);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px 16px 14px;
+      backdrop-filter: blur(6px);
+    }
+    @media (min-width:820px){
+      .card.half{grid-column: span 6}
+    }
+    .meta{display:flex; gap:10px; flex-wrap:wrap; margin:6px 0 10px}
+    .tag{
+      font-size:12px; color:rgba(232,238,247,.86);
+      padding:4px 8px; border-radius:999px;
+      background: rgba(125,211,252,.10);
+      border:1px solid rgba(125,211,252,.18);
+    }
+    .tag.purple{
+      background: rgba(167,139,250,.10);
+      border:1px solid rgba(167,139,250,.18);
+    }
+    .title{
+      font-weight:700; font-size:16px; margin:0;
+    }
+    .venue{color:var(--muted); font-size:13.5px; margin-top:4px}
+    .desc{color:rgba(232,238,247,.92); margin:10px 0 0}
+    .links{margin-top:10px; display:flex; gap:12px; flex-wrap:wrap; font-size:13.5px}
+    footer{
+      border-top:1px solid var(--border);
+      padding:20px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .note{color:var(--muted); font-size:13px; margin-top:8px}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="top">
+        <div>
+          <h1>Mariha Siddika Ahmad</h1>
+          <p class="subtitle">
+            PhD researcher working on database security, anomaly-aware damage assessment,
+            and post-attack recovery. Interested in log design, lineage tracking, and
+            learning-augmented systems for faster recovery.
+          </p>
+
+          <div class="chips">
+            <span class="chip">Database Recovery</span>
+            <span class="chip">Transaction Logs</span>
+            <span class="chip">Damage Assessment</span>
+            <span class="chip">Fog/Distributed Systems</span>
+            <span class="chip">ML for Systems (Advisory)</span>
+          </div>
+
+          <div class="contact">
+            <span>Email: <a href="mailto:ma135@uark.edu">ma135@uark.edu</a></span>
+            <!-- Add these if you want -->
+            <!-- <span>Google Scholar: <a href="YOUR_SCHOLAR_URL" target="_blank" rel="noreferrer">Profile</a></span> -->
+            <!-- <span>GitHub: <a href="YOUR_GITHUB_URL" target="_blank" rel="noreferrer">@username</a></span> -->
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        Tip: replace placeholder links (Scholar/GitHub) if you want this page to be “live-ready.”
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section>
+        <h2>Publications</h2>
+        <div class="grid">
+
+          <article class="card">
+            <p class="title">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
+            <div class="meta">
+              <span class="tag">Journal</span>
+              <span class="tag purple">Database Recovery</span>
+            </div>
+            <div class="venue">Electronics (2024)</div>
+            <p class="desc">
+              Proposes a log organization framework that clusters related operations by data item
+              to accelerate damage assessment and recovery. The design improves dependency tracing
+              and reduces unnecessary log scans compared with sequential logging.
+            </p>
+            <div class="links">
+              <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
+            </div>
+          </article>
+
+          <article class="card half">
+            <p class="title">Validating Damage Assessment: A Simulation-Based Analysis of Blind Write Lineage in Fog Computing</p>
+            <div class="meta">
+              <span class="tag">Conference/Workshop</span>
+              <span class="tag purple">Fog Computing</span>
+            </div>
+            <div class="venue">5th Workshop on Secure IoT, Edge and Cloud Systems (SIoTEC), Philadelphia, PA (2024)</div>
+            <p class="desc">
+              Presents a simulation-based evaluation of blind write lineage tracking for identifying
+              compromised data in distributed fog environments and studying propagation patterns.
+            </p>
+            <div class="links">
+              <!-- Add URL if you have a public PDF / proceedings page -->
+              <span class="note">Link: add proceedings/PDF URL if available</span>
+            </div>
+          </article>
+
+          <article class="card half">
+            <p class="title">Damage Assessment in Fog Computing Systems: A Blind Write Lineage Approach</p>
+            <div class="meta">
+              <span class="tag">Conference</span>
+              <span class="tag purple">Lineage &amp; Recovery</span>
+            </div>
+            <div class="venue">IEEE/ACM CCGrid Workshops (CCGridW) (2024)</div>
+            <p class="desc">
+              Introduces a lineage-based methodology for isolating affected data after attacks in fog
+              systems using structured dependency sets to reduce recovery scope.
+            </p>
+            <div class="links">
+              <a href="https://doi.org/10.1109/CCGridW63211.2024.00012" target="_blank" rel="noreferrer">DOI</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <p class="title">Design and Performance Analysis of a Compact Implantable PIFA Antenna for Biomedical Applications</p>
+            <div class="meta">
+              <span class="tag">Conference</span>
+              <span class="tag purple">Biomedical Antennas</span>
+            </div>
+            <div class="venue">5th International Conference on Advances in Electrical Engineering (ICAEE) (2019)</div>
+            <p class="desc">
+              Designs and evaluates a compact implantable antenna for biomedical communication,
+              analyzing key performance metrics including bandwidth, gain, and efficiency.
+            </p>
+            <div class="links">
+              <a href="https://doi.org/10.1109/ICAEE48663.2019.8975528" target="_blank" rel="noreferrer">DOI</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+        <div class="grid">
+
+          <article class="card half">
+            <p class="title">Malware Detection Using Pyramid Vision Transformer</p>
+            <div class="meta">
+              <span class="tag">Project</span>
+              <span class="tag purple">Deep Learning</span>
+            </div>
+            <p class="desc">
+              Built an image-based malware detection pipeline by converting binaries into pixel
+              representations and applying a Pyramid Vision Transformer. Achieved ~94.8% accuracy
+              and 0.94 precision in detecting planted malicious code patterns.
+            </p>
+            <div class="links">
+              <span class="note">Link: add GitHub/report URL if available</span>
+            </div>
+          </article>
+
+          <article class="card half">
+            <p class="title">Hotel Booking Cancellation Prediction</p>
+            <div class="meta">
+              <span class="tag">Project</span>
+              <span class="tag purple">Machine Learning</span>
+            </div>
+            <p class="desc">
+              Developed cancellation prediction models with preprocessing, feature engineering,
+              and algorithm comparison (Logistic Regression, Random Forest, XGBoost), including
+              hyperparameter tuning for best performance.
+            </p>
+            <div class="links">
+              <span class="note">Link: add GitHub/report URL if available</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Mariha Siddika Ahmad — Research Portfolio
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
