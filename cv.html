@@ -63,22 +63,26 @@
 (function(){
   const params = new URLSearchParams(window.location.search);
 
-  // If you ever visit with ?no_count=1, remember it for future visits
+  // Persist "don't count me" both in localStorage + cookie
   if (params.get("no_count") === "1") {
     localStorage.setItem("no_count", "1");
+    document.cookie = "no_count=1; path=/Mariha.github.io/; max-age=31536000";
   }
-  // Optional: if you visit with ?count=1, it re-enables counting
   if (params.get("count") === "1") {
     localStorage.removeItem("no_count");
+    document.cookie = "no_count=; path=/Mariha.github.io/; max-age=0";
   }
 
-  // If no_count is enabled (remembered), do NOT load GoatCounter
-  if (localStorage.getItem("no_count") === "1") {
-    console.log("Visitor counter disabled (saved preference).");
+  // Check cookie
+  const cookieNoCount = document.cookie.split("; ").some(c => c.startsWith("no_count=1"));
+
+  // If enabled, do NOT load GoatCounter
+  if (localStorage.getItem("no_count") === "1" || cookieNoCount) {
+    console.log("Visitor counter disabled for this browser.");
     return;
   }
 
-  // Otherwise load GoatCounter normally
+  // Load GoatCounter
   const s = document.createElement("script");
   s.async = true;
   s.src = "//gc.zgo.at/count.js";
@@ -86,6 +90,7 @@
   document.body.appendChild(s);
 })();
 </script>
+
 
 
 
