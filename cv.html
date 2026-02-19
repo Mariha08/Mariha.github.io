@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mariha Siddika Ahmad — CV</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1 class="name">Curriculum Vitae</h1>
+      <p class="role">Download and contact details.</p>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+
+        <div class="toolbar">
+          <button class="btn" onclick="toggleTheme()">Toggle theme</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section>
+        <h2>Download</h2>
+        <div class="card">
+          <p class="desc">
+            CV PDF: <a href="Mariha_CV.pdf" target="_blank" rel="noreferrer">Mariha_CV.pdf</a>
+          </p>
+          <p class="small">
+            Upload your PDF into the repo root with the exact name <b>Mariha_CV.pdf</b> (same folder as index.html).
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <div class="card">
+          <p class="desc">
+            Email: <a href="mailto:ma135@uark.edu">ma135@uark.edu</a><br/>
+            ORCID: <a href="https://orcid.org/0009-0009-2057-4574" target="_blank" rel="noreferrer">0009-0009-2057-4574</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Mariha Siddika Ahmad
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+
+  <!-- Visitor counter (GoatCounter) -->
+  <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+</body>
+</html>
