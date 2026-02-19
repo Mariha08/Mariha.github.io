@@ -18,9 +18,9 @@
         <a href="projects.html">Projects</a>
         <a href="cv.html">CV</a>
 
-        <div class="toolbar">
+        <!--<div class="toolbar">
           <button class="btn" onclick="toggleTheme()">Toggle theme</button>
-        </div>
+        </div> -->
       </nav>
 
       <div class="chips">
@@ -91,7 +91,7 @@
         <h2>Also on ORCID</h2>
         <p class="small">
           ORCID: <a href="https://orcid.org/0009-0009-2057-4574" target="_blank" rel="noreferrer">0009-0009-2057-4574</a>.
-          If an item is missing here, keep it in “Featured” above (manual), or add it to ORCID later.
+          <!--If an item is missing here, keep it in “Featured” above (manual), or add it to ORCID later.-->
         </p>
         <div id="orcidList"></div>
       </section>
@@ -105,14 +105,26 @@
     </div>
   </footer>
 
-  <script>
+<script>
 (function(){
   const params = new URLSearchParams(window.location.search);
-  if(params.get("no_count") === "1"){
-    console.log("Visitor counter disabled for this visit.");
+
+  // If you ever visit with ?no_count=1, remember it for future visits
+  if (params.get("no_count") === "1") {
+    localStorage.setItem("no_count", "1");
+  }
+  // Optional: if you visit with ?count=1, it re-enables counting
+  if (params.get("count") === "1") {
+    localStorage.removeItem("no_count");
+  }
+
+  // If no_count is enabled (remembered), do NOT load GoatCounter
+  if (localStorage.getItem("no_count") === "1") {
+    console.log("Visitor counter disabled (saved preference).");
     return;
   }
 
+  // Otherwise load GoatCounter normally
   const s = document.createElement("script");
   s.async = true;
   s.src = "//gc.zgo.at/count.js";
@@ -120,6 +132,7 @@
   document.body.appendChild(s);
 })();
 </script>
+
 
   <!-- Visitor counter (GoatCounter) -->
   <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
