@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mariha Siddika Ahmad — Publications</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1 class="name">Publications</h1>
+      <p class="role">Selected publications + ORCID auto-loaded works (ORCID is incomplete, so featured items stay manual).</p>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">CV</a>
+
+        <div class="toolbar">
+          <button class="btn" onclick="toggleTheme()">Toggle theme</button>
+        </div>
+      </nav>
+
+      <div class="chips">
+        <button class="chip" data-filter-chip="1" data-value="all" aria-pressed="true" onclick="applyFilter('all')">All</button>
+        <button class="chip" data-filter-chip="1" data-value="journal" aria-pressed="false" onclick="applyFilter('journal')">Journal</button>
+        <button class="chip" data-filter-chip="1" data-value="conference" aria-pressed="false" onclick="applyFilter('conference')">Conference</button>
+        <button class="chip" data-filter-chip="1" data-value="workshop" aria-pressed="false" onclick="applyFilter('workshop')">Workshop</button>
+      </div>
+
+      <div id="pubStatus" class="status"></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+
+      <section>
+        <h2>Featured</h2>
+
+        <div class="card" data-filter-card="1" data-type="journal">
+          <p class="itemTitle">ClusteredLog: Optimizing Log Structures for Efficient Data Recovery and Integrity Management in Database Systems</p>
+          <div class="meta">Electronics (Journal), 2024</div>
+          <p class="desc">
+            Proposes a clustered log organization to accelerate damage assessment and recovery by enabling faster dependency tracing
+            and reducing unnecessary log scans.
+          </p>
+          <div class="links">
+            <a href="https://doi.org/10.3390/electronics13234723" target="_blank" rel="noreferrer">DOI</a>
+          </div>
+        </div>
+
+        <div class="card" data-filter-card="1" data-type="workshop">
+          <p class="itemTitle">Validating Damage Assessment: A Simulation-Based Analysis of Blind Write Lineage in Fog Computing</p>
+          <div class="meta">SIoTEC Workshop, 2024</div>
+          <p class="desc">
+            Simulation-based evaluation of blind write lineage tracking for identifying compromised data and understanding propagation behavior in fog systems.
+          </p>
+          <div class="links">
+            <span class="small">Add proceedings/PDF link when available</span>
+          </div>
+        </div>
+
+        <div class="card" data-filter-card="1" data-type="conference">
+          <p class="itemTitle">Damage Assessment in Fog Computing Systems: A Blind Write Lineage Approach</p>
+          <div class="meta">IEEE/ACM CCGrid Workshops (CCGridW), 2024</div>
+          <p class="desc">
+            Lineage-based method to isolate affected data after attacks in fog environments using structured dependency sets to reduce recovery scope.
+          </p>
+          <div class="links">
+            <a href="https://doi.org/10.1109/CCGridW63211.2024.00012" target="_blank" rel="noreferrer">DOI</a>
+          </div>
+        </div>
+
+        <div class="card" data-filter-card="1" data-type="conference">
+          <p class="itemTitle">Design and Performance Analysis of a Compact Implantable PIFA Antenna for Biomedical Applications</p>
+          <div class="meta">ICAEE, 2019</div>
+          <p class="desc">
+            Design and evaluation of a compact implantable antenna for biomedical communication, analyzing bandwidth, gain, and efficiency.
+          </p>
+          <div class="links">
+            <a href="https://doi.org/10.1109/ICAEE48663.2019.8975528" target="_blank" rel="noreferrer">DOI</a>
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <h2>Also on ORCID</h2>
+        <p class="small">
+          ORCID: <a href="https://orcid.org/0009-0009-2057-4574" target="_blank" rel="noreferrer">0009-0009-2057-4574</a>.
+          If an item is missing here, keep it in “Featured” above (manual), or add it to ORCID later.
+        </p>
+        <div id="orcidList"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © <span id="y"></span> Mariha Siddika Ahmad
+    </div>
+  </footer>
+
+  <script src="assets/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+    applyFilter("all");
+    loadOrcidWorks("0009-0009-2057-4574");
+  </script>
+
+  <!-- Visitor counter (GoatCounter) -->
+  <!-- <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script> -->
+</body>
+</html>
