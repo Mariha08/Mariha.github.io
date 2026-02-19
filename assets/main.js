@@ -85,7 +85,7 @@ window.loadOrcidWorks = async function(orcid){
 
     list.innerHTML = "";
     list.appendChild(frag);
-    show(`Loaded ${items.length} work(s) from ORCID. (You can manually add missing works above.)`);
+    show(`Loaded ${items.length} work(s) from ORCID.`);
   } catch(e){
     show(`Could not load ORCID publications: ${e.message}`);
   }
