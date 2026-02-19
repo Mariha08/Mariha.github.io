@@ -18,9 +18,9 @@
         <a href="projects.html">Projects</a>
         <a href="cv.html">CV</a>
 
-        <div class="toolbar">
+        <!-- <div class="toolbar">
           <button class="btn" onclick="toggleTheme()">Toggle theme</button>
-        </div>
+        </div> -->
       </nav>
     </div>
   </header>
@@ -38,9 +38,9 @@
               Built an image-based malware detection pipeline by converting binaries into pixel representations and applying a transformer-based model.
               Achieved ~94.8% accuracy and 0.94 precision.
             </p>
-            <div class="links">
+            <!--<div class="links">
               <span class="small">Add: GitHub/report URL</span>
-            </div>
+            </div> -->
           </div>
 
           <div class="card">
@@ -50,9 +50,9 @@
               Developed cancellation prediction models with preprocessing, feature engineering, and algorithm comparison
               (Logistic Regression, Random Forest, XGBoost) with hyperparameter tuning.
             </p>
-            <div class="links">
+            <!-- <div class="links">
               <span class="small">Add: GitHub/report URL</span>
-            </div>
+            </div> -->
           </div>
 
         </div>
@@ -66,14 +66,26 @@
     </div>
   </footer>
 
-  <script>
+<script>
 (function(){
   const params = new URLSearchParams(window.location.search);
-  if(params.get("no_count") === "1"){
-    console.log("Visitor counter disabled for this visit.");
+
+  // If you ever visit with ?no_count=1, remember it for future visits
+  if (params.get("no_count") === "1") {
+    localStorage.setItem("no_count", "1");
+  }
+  // Optional: if you visit with ?count=1, it re-enables counting
+  if (params.get("count") === "1") {
+    localStorage.removeItem("no_count");
+  }
+
+  // If no_count is enabled (remembered), do NOT load GoatCounter
+  if (localStorage.getItem("no_count") === "1") {
+    console.log("Visitor counter disabled (saved preference).");
     return;
   }
 
+  // Otherwise load GoatCounter normally
   const s = document.createElement("script");
   s.async = true;
   s.src = "//gc.zgo.at/count.js";
@@ -81,6 +93,7 @@
   document.body.appendChild(s);
 })();
 </script>
+
 
 
   <!-- Visitor counter (GoatCounter) -->
